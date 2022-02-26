@@ -58,6 +58,7 @@ class SentimentView(View):
                     response.append(
                     {'sentence':sentence,'log_po_ne':po_ne(LOGREs),'dec_po_ne':po_ne(DECs),'knn_po_ne':po_ne(KNNs),'rnd_po_ne':po_ne(RNDf),'linear_po_ne':po_ne(LINEAR_SVC),'mnb_po_ne':po_ne(MNB),'bnb_po_ne':po_ne(BNB)}
                     )
+            print(response)
             return render(request, 'sentiment.html', {'response':response,'text':text})
             # (sentence,'pos' if (g+m+b+dec+knnC+LOGREs+randomF+svc_lin)>=4 else 'neg')
             
