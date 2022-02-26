@@ -1,3 +1,5 @@
+# pip install -r requirements.txt
+
 # Feature Extraction Methods
 
     - Bag of word model
