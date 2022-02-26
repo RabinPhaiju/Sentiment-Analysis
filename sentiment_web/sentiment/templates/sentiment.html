@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>{{ settings.APP_NAME }}</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <textarea name="text" cols="40" rows="10"
+                placeholder="Enter text">{% if text%}{{ text }}{% endif %}</textarea>
+            <br />
+            <input type="checkbox" id="clean1" name="clean" value="clean" checked>
+            <label for="clean1"> Clean Text</label>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+        </form>
+        {% if response %}
+        <table>
+            <tr>
+                <th>Sentence</th>
+                <th>Logestic Regression</th>
+                <th>Decision Tree</th>
+                <th>KNN</th>
+                <th>Random Forest</th>
+                <th>Linear Regression</th>
+                <th>mnb_po_ne</th>
+                <th>bnb_po_ne</th>
+            </tr>
+            {% for res in response %}
+            <tr>
+                <td>{{ res.sentence }}</td>
+                <td>{{res.log_po_ne}}</td>
+                <td>{{res.dec_po_ne}}</td>
+                <td>{{knn_po_ne}}</td>
+                <td>{{res.rnd_po_ne}}</td>
+                <td>{{res.linear_po_ne}}</td>
+                <td>{{res.mnb_po_ne}}</td>
+                <td>{{res.bnb_po_ne}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+</body>
+
+</html>
