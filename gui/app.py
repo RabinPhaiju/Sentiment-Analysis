@@ -30,9 +30,9 @@ def load_model():
     global model_loaded
     model_loaded = True
     print('____model loading_____')
-    gnb = pickle.load(open('Naive_Bayes/gnb.sav','rb'))
+    # gnb = pickle.load(open('Naive_Bayes/gnb.sav','rb'))
     mnb = pickle.load(open('Naive_Bayes/mnb.sav','rb'))
-    bnb = pickle.load(open('Naive_Bayes/bnb.sav','rb'))
+    # bnb = pickle.load(open('Naive_Bayes/bnb.sav','rb'))
     nb_tf = pickle.load(open('Naive_Bayes/vectorizer.sav','rb'))
 
     logreg = pickle.load(open('Logestic_Regression/logreg.sav','rb'))
@@ -47,8 +47,8 @@ def load_model():
     knn = pickle.load(open('KNN/knn2_0.81_120,80,2.sav','rb'))
     knn_tf = pickle.load(open('KNN/vectorizer2.sav','rb'))
 
-    dec_t = pickle.load(open('Decision Tree/dec_tree.sav','rb'))
-    dec_tf = pickle.load(open('Decision Tree/vectorizer.sav','rb'))
+    dec_t = pickle.load(open('Decision Tree/dec_tree2_movie_0.719 _2,6,0.sav','rb'))
+    dec_tf = pickle.load(open('Decision Tree/vectorizer2_movie.sav','rb'))
     print('____model loaded_____')
 
 # main notebook
