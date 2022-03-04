@@ -42,9 +42,9 @@
                 <th>Decision Tree</th>
                 <th>KNN</th>
                 <th>Random Forest</th>
-                <th>Linear Regression</th>
-                <th>mnb_po_ne</th>
-                <th>bnb_po_ne</th>
+                <th>Logestic Regression</th>
+                <th>Multinominal NB</th>
+
             </tr>
             {% for res in response %}
             <tr>
@@ -55,7 +55,7 @@
                 <td>{{res.rnd_po_ne}}</td>
                 <td>{{res.linear_po_ne}}</td>
                 <td>{{res.mnb_po_ne}}</td>
-                <td>{{res.bnb_po_ne}}</td>
+
             </tr>
             {% endfor %}
         </table>
