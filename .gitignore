@@ -1,4 +1,4 @@
-/s_venv
+/venv
 .DS_Store
 *.xlsx
 __pycache__

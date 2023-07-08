@@ -1,3 +1,12 @@
+# create venv
+    - python3 -m venv venv
+    - where python3
+    - source venv/bin/activate
+
+# Fix package
+    - sudo apt install python3-tk
+    - sudo apt install libportaudio2
+
 # pip install -r requirements.txt
 
 # Feature Extraction Methods
