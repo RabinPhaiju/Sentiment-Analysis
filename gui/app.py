@@ -31,23 +31,23 @@ def load_model():
     model_loaded = True
     print('____model loading_____')
     # gnb = pickle.load(open('Naive_Bayes/gnb.sav','rb'))
-    mnb = pickle.load(open('Naive_Bayes/mnb2_movie_0.854_1,True.sav','rb'))
+    mnb = pickle.load(open('Naive_Bayes/mnb1_0.829_120,True.sav','rb'))
     # bnb = pickle.load(open('Naive_Bayes/bnb.sav','rb'))
-    nb_tf = pickle.load(open('Naive_Bayes/vectorizer2_movie.sav','rb'))
+    nb_tf = pickle.load(open('Naive_Bayes/vectorizer1.sav','rb'))
 
-    logreg = pickle.load(open('Logestic_Regression/logreg2_movie_0.890_2,2,200.sav','rb'))
-    log_tf = pickle.load(open('Logestic_Regression/vectorizer2_movie.sav','rb'))
+    logreg = pickle.load(open('Logestic_Regression/logreg1_0.890_2,2,200.sav','rb'))
+    log_tf = pickle.load(open('Logestic_Regression/vectorizer1.sav','rb'))
 
-    linear_svc = pickle.load(open('SVC/svc2_movie_0.888_0.0001,1,2,4.sav','rb'))
-    svc_tf = pickle.load(open('SVC/vectorizer2_movie.sav','rb'))
+    linear_svc = pickle.load(open('SVC/svc2_mix_0.881_0.0001,1,1,1000.sav','rb'))
+    svc_tf = pickle.load(open('SVC/vectorizer1.sav','rb'))
 
-    rnd_f = pickle.load(open('Random Forest/rnd2_movie_0.856_200,2,2.sav','rb'))
-    rnd_tf = pickle.load(open('Random Forest/vectorizer2_movie.sav','rb'))
+    rnd_f = pickle.load(open('Random Forest/rnd2_mix_0.853_160,2,3.sav','rb'))
+    rnd_tf = pickle.load(open('Random Forest/vectorizer1.sav','rb'))
 
-    knn = pickle.load(open('KNN/knn2_clean_0.81_120,80,2.sav','rb'))
+    knn = pickle.load(open('KNN/knn2_clean_0.81,34,2.sav','rb'))
     knn_tf = pickle.load(open('KNN/vectorizer2_clean.sav','rb'))
 
-    dec_t = pickle.load(open('Decision Tree/dec_tree2_movie_0.719 _2,6,0.sav','rb'))
+    dec_t = pickle.load(open('Decision Tree/dec_tree2_movie_0.72 _3,2,0.sav','rb'))
     dec_tf = pickle.load(open('Decision Tree/vectorizer2_movie.sav','rb'))
     print('____model loaded_____')
 
